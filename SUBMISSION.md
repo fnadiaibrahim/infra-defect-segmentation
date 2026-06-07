@@ -20,7 +20,13 @@ https://github.com/fnadiaibrahim/infra-defect-segmentation
 
 ## Deployed Application
 
-Deployed Application URL:
+Live Application URL:
+
+```text
+https://fnadiaibrahim-infra-defect-segmentation.hf.space
+```
+
+Hugging Face Space page:
 
 ```text
 https://huggingface.co/spaces/fnadiaibrahim/infra-defect-segmentation

@@ -18,6 +18,10 @@ This project uses a fine-tuned YOLOv8 instance segmentation model with a FastAPI
 
 The deployed application is available at:
 
+https://fnadiaibrahim-infra-defect-segmentation.hf.space
+
+Hugging Face Space page:
+
 https://huggingface.co/spaces/fnadiaibrahim/infra-defect-segmentation
 
 ## Demo Overview
