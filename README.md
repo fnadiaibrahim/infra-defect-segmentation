@@ -14,6 +14,12 @@ An end-to-end computer vision prototype for detecting and segmenting visible inf
 
 This project uses a fine-tuned YOLOv8 instance segmentation model with a FastAPI backend and React frontend. The system detects concrete surface defects, generates segmentation overlays, and returns prediction metadata such as class label, confidence score, affected area percentage, and processing time.
 
+## Live Demo
+
+The deployed application is available at:
+
+https://huggingface.co/spaces/fnadiaibrahim/infra-defect-segmentation
+
 ## Demo Overview
 
 The current prototype supports two defect classes:

@@ -23,7 +23,7 @@ https://github.com/fnadiaibrahim/infra-defect-segmentation
 Deployed Application URL:
 
 ```text
-To be added after deployment.
+https://huggingface.co/spaces/fnadiaibrahim/infra-defect-segmentation
 ```
 
 ## Walkthrough Video
