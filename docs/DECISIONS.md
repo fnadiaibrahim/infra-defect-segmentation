@@ -153,3 +153,24 @@ Affected area percentage is calculated as:
 
 ```text
 defect mask pixels / total image pixels * 100
+```
+
+## 10. Production Deployment Considerations
+
+The current implementation prioritizes rapid prototyping and assessment delivery. For production-scale deployment, several improvements would be required:
+
+- GPU-backed inference service
+- asynchronous task queue for large image batches
+- model versioning and rollback support
+- centralized logging and monitoring
+- object storage for uploaded images
+- authentication and request rate limiting
+- ONNX or TensorRT optimization for lower latency
+
+These improvements were intentionally deferred because the assessment prioritizes end-to-end functionality within a short development timeline.
+
+## 11. Failure Analysis Consideration
+
+During testing, the model occasionally produced false positives on concrete textures, shadows, or surface lines that visually resemble cracks. Thin crack boundaries also sometimes resulted in incomplete segmentation masks.
+
+Instead of aggressively filtering these predictions using hardcoded rules, I kept the post-processing lightweight to avoid accidentally suppressing valid defects. In a production environment, additional filtering or confidence calibration could be explored after collecting more real-world inspection data.
