@@ -2,7 +2,9 @@ import cv2
 import numpy as np
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
-
+from pathlib import Path
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from app.config import CLASS_NAMES
 from app.inference import DefectSegmenter
 from app.postprocess import create_overlay, image_to_base64
@@ -39,12 +41,16 @@ def load_model():
 
 @app.get("/")
 def root():
+    frontend_index = Path(__file__).resolve().parents[2] / "frontend" / "dist" / "index.html"
+
+    if frontend_index.exists():
+        return FileResponse(frontend_index)
+
     return {
         "message": "Welcome to the Infrastructure Defect Segmentation API",
         "docs": "/docs",
         "health": "/health"
     }
-
 
 @app.get("/health")
 def health_check():
@@ -96,3 +102,17 @@ async def predict(file: UploadFile = File(...)):
         "original_image": image_to_base64(image),
         "overlay_image": image_to_base64(overlay)
     }
+
+FRONTEND_DIST = Path(__file__).resolve().parents[2] / "frontend" / "dist"
+
+if FRONTEND_DIST.exists():
+    app.mount(
+        "/assets",
+        StaticFiles(directory=FRONTEND_DIST / "assets"),
+        name="assets"
+    )
+
+    @app.get("/{full_path:path}")
+    def serve_frontend(full_path: str):
+        index_file = FRONTEND_DIST / "index.html"
+        return FileResponse(index_file)

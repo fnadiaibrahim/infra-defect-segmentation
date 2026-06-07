@@ -1,3 +1,13 @@
+---
+title: Infrastructure Defect Segmentation
+emoji: 🏗️
+colorFrom: blue
+colorTo: yellow
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Infrastructure Defect Segmentation
 
 An end-to-end computer vision prototype for detecting and segmenting visible infrastructure surface defects from uploaded images.
