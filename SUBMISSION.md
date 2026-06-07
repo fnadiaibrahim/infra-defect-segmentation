@@ -37,7 +37,7 @@ https://huggingface.co/spaces/fnadiaibrahim/infra-defect-segmentation
 Screen Recording Link:
 
 ```text
-To be added after recording.
+https://drive.google.com/file/d/1LJh_5HamQmQQDqYMEqVeFIL3BAGPuUYk/view?usp=sharing
 ```
 
 ## Implemented Features
