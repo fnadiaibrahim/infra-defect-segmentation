@@ -5,8 +5,7 @@ import numpy as np
 
 MASK_COLORS = {
     0: np.array([255, 0, 0], dtype=np.uint8),      # crack - blue in BGR
-    1: np.array([0, 255, 255], dtype=np.uint8),    # spalling - yellow
-    2: np.array([0, 0, 255], dtype=np.uint8),      # corrosion - red
+    1: np.array([0, 255, 255], dtype=np.uint8),    # spalling - yellow in BGR
 }
 
 

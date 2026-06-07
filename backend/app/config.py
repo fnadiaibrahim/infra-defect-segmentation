@@ -5,8 +5,7 @@ MODEL_PATH = BASE_DIR / "weights" / "best.pt"
 
 CLASS_NAMES = {
     0: "crack",
-    1: "spalling",
-    2: "corrosion"
+    1: "spalling"
 }
 
 CONF_THRESHOLD = 0.25
