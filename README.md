@@ -17,6 +17,32 @@ The application workflow is:
 Upload image → Run segmentation → View overlay → Review prediction summary
 ```
 
+## Demo Screenshots
+
+### API Documentation
+
+The FastAPI backend provides interactive Swagger documentation for all available endpoints.
+
+![API Documentation](docs/screenshots/api_docs.png)
+
+### Model Health Check
+
+The `/health` endpoint confirms that the backend is running and the trained model is loaded successfully.
+
+![Model Loaded Health Check](docs/screenshots/health_model_loaded.png)
+
+### Spalling Prediction
+
+Example prediction showing spalling segmentation overlay and prediction metadata.
+
+![Spalling Prediction Demo](docs/screenshots/spalling_prediction_demo.png)
+
+### Crack Prediction
+
+Example prediction showing crack segmentation overlay and prediction metadata.
+
+![Crack Prediction Demo](docs/screenshots/crack_prediction_demo.png)
+
 ## Key Features
 
 * Fine-tuned YOLOv8 segmentation model
