@@ -1,12 +1,3 @@
----
-title: Infrastructure Defect Segmentation
-emoji: 🏗️
-colorFrom: blue
-colorTo: yellow
-sdk: docker
-app_port: 7860
-pinned: false
----
 
 # Infrastructure Defect Segmentation
 
